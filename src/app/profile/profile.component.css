@@ -1,0 +1,12 @@
+.list-info {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.list-info table tr td i {
+    margin-left: 40px;
+}
+
+.list-info table tr td{
+    padding: 10px;
+}

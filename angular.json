@@ -119,6 +119,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "demo2"
+    },
+    "auth-oidc": {
+      "projectType": "library",
+      "root": "projects/auth-oidc",
+      "sourceRoot": "projects/auth-oidc/src",
+      "prefix": "auth",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/auth-oidc/tsconfig.lib.json",
+            "project": "projects/auth-oidc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/auth-oidc/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/auth-oidc/src/test.ts",
+            "tsConfig": "projects/auth-oidc/tsconfig.spec.json",
+            "karmaConfig": "projects/auth-oidc/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/auth-oidc/tsconfig.lib.json",
+              "projects/auth-oidc/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "demo2",
+  "cli": {
+    "analytics": "15a4e52a-0436-46fa-a462-5a3bf222e11f"
+  }
 }

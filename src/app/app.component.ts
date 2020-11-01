@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'demo2';
+export class AppComponent implements OnInit {
+  constructor () {}
+
+  ngOnInit() {
+  //   this.authService.completeAuthentication()
+  //   .catch((error) => {
+  //     console.error(`could not complete authentication: ${error}`);
+  //   })
+  //   .then(() => {
+  //     if (this.authService.isLoggedIn()) {
+  //       console.log("Ok da login: ", this.authService.getAccessToken());
+  //     }
+  //   }
+  // );
 }
+}
+
